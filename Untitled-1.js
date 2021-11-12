@@ -1,17 +1,30 @@
-//变换背景颜色
-/**
- * 产生随机整数，包含下限值，包括上限值
- * @param {Number} lower 下限
- * @param {Number} upper 上限
- * @return {Number} 返回在下限到上限之间的一个随机整数
- */
- function random(lower, upper) {
-	return Math.floor(Math.random() * (upper - lower + 1)) + lower;
-}
-//随机设置背景色
+window.open=setBGC();
 function setBGC() {
-	var colorArr = new Array("#4395D1", "#00A99D", "#FBAF5D", "#84871C", "#9E6B52", "#A186BE");
-	var i = random(0, 5);
-	document.getElementById("imgBg").style.background = colorArr[i];
-}
-setInterval(setBGC, 300);
+	
+	var hour = t.getHours();
+	switch(hour){
+		case 10:document.getElementById("imgBg").style.background = "#0000ff";
+			break;
+		case 11:document.getElementById("imgBg").style.background = "#00ff00";
+			break;
+		case 12:document.getElementById("imgBg").style.background = "#800000";
+			break;
+		case 13:document.getElementById("imgBg").style.background = "#00ffff";
+			break;
+		case 14:document.getElementById("imgBg").style.background = "#000080";
+			break;
+		case 15:document.getElementById("imgBg").style.background = "#008000";
+			break;
+		case 16:document.getElementById("imgBg").style.background = "#800000";
+			break;
+		case 17:document.getElementById("imgBg").style.background = "#00ffff";
+			break;
+		case 18:document.getElementById("imgBg").style.background = "#ffff00";
+			break;
+	}
+	
+	}
+
+
+
+//setInterval(setBGC, 300);
